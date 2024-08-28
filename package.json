@@ -1,6 +1,6 @@
 {
   "name": "dukesd.com",
-  "homepage": "https://kiddkoding.github.io/portfolio",
+  "homepage": "https://kiddkoding.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
