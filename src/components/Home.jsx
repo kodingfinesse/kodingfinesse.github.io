@@ -1,7 +1,7 @@
 // src/components/Home.jsx
 import React from 'react';
 
-function Home() {
+export default function Home() {
   return (
     <section id="home" className="section">
       <h1>Welcome to My Portfolio</h1>
@@ -9,5 +9,3 @@ function Home() {
     </section>
   );
 }
-
-export default Home;

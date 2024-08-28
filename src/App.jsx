@@ -1,20 +1,20 @@
 // src/App.jsx
 import React from 'react';
 import Home from './components/Home';
+import StickyNavbar from "./components/Navbar";
 import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import './styles/global.css';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
+    <main>
+      <StickyNavbar />
       <Home />
       <About />
       <Projects />
       <Contact />
-    </div>
+    </main>
   );
 }
-
-export default App;

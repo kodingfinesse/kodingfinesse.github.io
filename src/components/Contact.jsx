@@ -1,14 +1,31 @@
-// src/components/Contact.jsx
-import React from 'react';
+import React from "react";
 
-function Contact() {
+export default function Contact() {
+  const [name, setName] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", name, email, message }),
+    })
+      .then(() => alert("Message sent!"))
+      .catch((error) => alert(error));
+  }
+
   return (
-    <section id="contact" className="section">
-      <h2>Contact Me</h2>
-      <p>Email: darren@example.com</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/darren-tran/">Darren Tran</a></p>
+    <section id="contact" className="relative">
     </section>
   );
 }
-
-export default Contact;
