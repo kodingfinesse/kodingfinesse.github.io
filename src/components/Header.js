@@ -1,18 +1,22 @@
 import React from 'react';
-
-const Header = () => {
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import About from '../pages/About'; // Import your About component
+import Gallery from "../components/Gallery"
+import Projects from '../pages/Projects'
+function App() {
   return (
-    <header>
-      <nav>
-        <h2>Untitled</h2>
+    <Router>
+      <div>
         <ul>
-          <li><a href="#" title="About">About</a></li>
-          <li><a href="#" title="Resume">Resume</a></li>
-          <li><a href="#" title="Contact">Contact</a></li>
+          <li><Link to="/about" title="About">About</Link></li>
         </ul>
-      </nav>
-    </header>
+        <Routes>
+          <Route path="/about" element={<About />} />
+          {/* Add other routes here */}
+        </Routes>
+      </div>
+    </Router>
   );
-};
+}
 
-export default Header;
+export default App;

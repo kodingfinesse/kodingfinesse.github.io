@@ -1,0 +1,178 @@
+/* AboutMe.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.about-me-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Section Styles */
+section {
+  padding: 40px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h1, h2, h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+/* Skills Section */
+.skills ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.skills li {
+  display: inline-block;
+  margin: 10px 20px;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.skills strong {
+  color: #3498db;
+}
+
+/* Experience Section */
+.job {
+  margin-bottom: 30px;
+}
+
+.job h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: #34495e;
+  text-align: left;
+}
+
+.job p {
+  font-size: 1.2em;
+  color: #888;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.job ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.job ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* Education and Certifications Section */
+.education ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.education li {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.education strong {
+  color: #3498db;
+}
+
+/* Personal Projects Section */
+.personal-projects p {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+}
+
+.contact p {
+  font-size: 1.2em;
+}
+
+.contact a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: #1abc9c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-me-container {
+    padding: 15px;
+  }
+
+  section {
+    padding: 30px 10px;
+  }
+
+  h1, h2 {
+    font-size: 1.8em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .skills li, .education li {
+    margin: 5px 10px;
+  }
+
+  .job h3, .job p, .job ul li {
+    text-align: center;
+  }
+}
