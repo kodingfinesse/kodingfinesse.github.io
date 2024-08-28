@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        &copy; Copyright 2017 <a href="http://katherinekato.com" title="Katherine Kato" target="_blank" rel="noreferrer">Katherine Kato</a>
+        &copy; Copyright 2024 <a href="http://DarrenTran.com" title="Darren Tran" target="_blank" rel="noreferrer">Darren Tran</a>
       </p>
     </footer>
   );
