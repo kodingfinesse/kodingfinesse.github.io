@@ -9,10 +9,11 @@ function App() {
       <div>
         <ul>
           <li><Link to="/about" title="About">About</Link></li>
+          <li><Link to="/projects" title="About">Projects</Link></li>
         </ul>
         <Routes>
           <Route path="/about" element={<About />} />
-          {/* Add other routes here */}
+          <Route path="/projects" element={<Gallery />} />
         </Routes>
       </div>
     </Router>
