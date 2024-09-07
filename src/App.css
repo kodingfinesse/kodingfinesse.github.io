@@ -1,196 +1,139 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  background: #fff;
-  color: #999;
-  line-height: 1.5;
-}
-
-.container {
-  max-width: 980px;
-  margin: 0 auto;
+/* Base Styling */
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Darker text color for better readability */
+  line-height: 1.6; /* Improved line spacing */
+  background-color: #f4f4f4; /* Light background color for the body */
 }
 
 a {
-  color: #33bfd0;
-  text-decoration: none;
-  transition: color 0.3s ease-out;
+  color: #0066cc; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 a:hover {
-  color: #70d2de;
+  color: #003366; /* Darker color on hover */
 }
 
-img {
+/* Image Styling */
+.w3-row-padding img {
+  margin-bottom: 12px;
+  border-radius: 8px; /* Rounded corners for images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+  transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.w3-row-padding img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Sidebar Styling */
+.w3-sidebar {
+  width: 120px;
+  background: #222;
+  color: #fff; /* White text color for better contrast */
+  position: fixed; /* Fixed sidebar */
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow effect for sidebar */
+}
+
+.w3-sidebar a {
   display: block;
-  vertical-align: middle;
-  width: 100%;
-  transition: opacity 0.3s ease-out;
+  padding: 10px 15px;
+  color: #ddd;
+  text-decoration: none;
 }
 
-img:hover {
-  opacity: 0.75;
+.w3-sidebar a:hover {
+  background-color: #444; /* Hover effect for sidebar links */
+  color: #fff;
 }
 
-a, img {
-  border: none;
-  outline: none;
+/* Main Content Styling */
+#main {
+  margin-left: 140px; /* Adjusted to prevent overlap with sidebar */
+  padding: 20px; /* Adds padding around main content */
+  transition: margin-left 0.3s; /* Smooth transition for responsive layout */
 }
 
-.main {
-  padding: 5em 0;
-  width: 80%;
-  margin: 0 auto;
+@media only screen and (max-width: 600px) {
+  #main {
+    margin-left: 0;
+    padding: 15px; /* Adjusted padding for smaller screens */
+  }
+
+  .w3-sidebar {
+    width: 100%; /* Sidebar takes full width on smaller screens */
+    height: auto;
+    position: relative; /* Makes sidebar stackable */
+  }
 }
 
-h1, h2, h3 {
-  color: #333;
+/* Flexbox Layout */
+.app-body {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Adds space between flex items */
+  flex-wrap: wrap; /* Makes items wrap on smaller screens */
 }
 
-h1 {
-  font-size: 2em;
-  text-align: center;
-  font-weight: 500;
-}
-
-h3 {
-  font-size: 1.3em;
-  margin: 2rem 0 0 0;
-  line-height: 0.5;
-  font-weight: 500;
-}
-
-header {
-  text-align: center;
-  color: #33bfd0;
-  text-transform: uppercase;
-}
-
-header nav {
-  list-style-type: none;
-  font-family: 'Montserrat', sans-serif;
-}
-
-header nav li {
-  margin: 0 15px;
-  display: inline-block;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.gallery ul li {
-  padding-bottom: 1em;
-}
-
-.item {
-  max-width: 50%;
-  float: left;
-  margin-bottom: 1em;
-  display: block;
-}
-
-.item:nth-of-type(2n+1) {
-  clear: left;
-}
-
-footer {
-  text-align: center;
-  padding: 2em 0;
-}
-
-/* CSS Grid */
+/* Container Holding Image and Text */
 .container {
-  display: grid;
-  grid-template-columns: 3fr 4fr;
-  grid-template-areas:
-    "header header header"
-    "main main main"
-    "gallery gallery gallery"
-    "footer footer footer";
+  position: relative;
+  margin-bottom: 50px; /* Adds space below each container */
+  padding: 20px; /* Adds padding inside the container */
+  background-color: #fff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for containers */
+  transition: transform 0.3s ease; /* Smooth transition effect */
 }
 
-.main {
-  grid-area: main;
+.container:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
 }
 
-header {
-  grid-area: header;
-  display: grid;
-  justify-items: center;
+/* Bottom Right Text */
+.text-block {
+  position: absolute; /* Absolute position for precise placement */
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px; /* Rounded corners for text block */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for text block */
 }
 
-.gallery {
-  grid-area: gallery;
+/* Image Wrapping */
+.wrap-image {
+  float: left; /* or right, depending on the desired placement */
+  margin: 0 15px 15px 0; /* Adds space around the image (top, right, bottom, left) */
+  max-width: 200px; /* Adjusts the image width */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.gallery ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  grid-gap: 1em;
+.text-image-wrap {
+  overflow: auto; /* Clears the float and maintains container height */
 }
 
-footer {
-  grid-area: footer;
-  display: grid;
-  justify-items: center;
+/* Button Styling */
+.button {
+  background-color: #0066cc; /* Button color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding around button text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-/* Flexbox */
-header {
-  display: flex;
-  justify-content: center;
-}
-
-header nav {
-  flex: 1;
-}
-
-header nav ul {
-  flex-wrap: wrap;
-}
-
-.gallery ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.gallery ul li {
-  flex: 0 1 calc(50% - 1em);
-  flex-basis: calc(50% - 1em);
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-}
-
-/* Media Queries */
-@media (max-width: 824px) {
-  header nav li {
-    margin: 0 10px;
-  }
-
-  .gallery ul {
-    grid-template-columns: 100%;
-  }
-
-  .gallery ul li {
-    flex-basis: 100%;
-  }
-
-  .item {
-    max-width: 100%;
-    float: none;
-  }
+.button:hover {
+  background-color: #003366; /* Darker button color on hover */
 }
