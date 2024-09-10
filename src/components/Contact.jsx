@@ -1,17 +1,27 @@
 import React from 'react';
+import '../styles/Contact.css';
 
-const Contact = () => (
-  <div className="padding-64 content text-grey" id="contact">
-    <h2 className="text-light-grey">Contact</h2>
-    <hr style={{ width: '200px' }} className="opacity" />
-    <div className="section">
-      <p><i className="fa fa-github fa-fw text-white xxlarge margin-right"></i> kodeklipper</p>
-      <p><i className="fa fa-envelope fa-fw text-white xxlarge margin-right"></i> kiddkoding@gmail.com</p>
+function Contact() {
+  return (
+    <div className="contact-container" id="contact">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/xqazokkb" method="POST" className="contact-form">
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" className="submit-btn">Send Message</button>
+      </form>
     </div>
-    <form action="/action_page.php" target="_blank">
-      {/* Input fields for Name, Email, Subject, and Message */}
-    </form>
-  </div>
-);
+  );
+}
 
 export default Contact;

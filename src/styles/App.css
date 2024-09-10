@@ -137,3 +137,13 @@ a:hover {
 .button:hover {
   background-color: #003366; /* Darker button color on hover */
 }
+
+
+.bio {
+  font-family: Garamond;
+  font-size: 15pt; /* This is equivalent to about 18.67px */
+  color: #000;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}

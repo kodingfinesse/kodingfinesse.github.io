@@ -15,10 +15,6 @@ const Sidebar = () => (
       <i className="fa fa-envelope w3-xxlarge"></i>
       <p>CONTACT</p>
     </a>
-    <a href="https://blog.dukesd.com" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i className="fa fa-book w3-xxlarge"></i>
-      <p>BLOG</p>
-    </a>
   </nav>
 );
 
