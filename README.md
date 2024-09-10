@@ -24,11 +24,8 @@ A personal portfolio website showcasing my background, skills, and work.
 
 2. Install dependencies:
    ```
-   cd kodeklipper.github.io
+   cd kodeklipper.github.io && npm install
    ```
-   npm install
-   ```
-
 3. Run the development server:
    ```
    npm start
