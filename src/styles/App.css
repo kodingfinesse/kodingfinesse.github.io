@@ -1,6 +1,6 @@
 /* Base Styling */
 body, h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Fira Code Retina";
   margin: 0;
   padding: 0;
   color: #333; /* Darker text color for better readability */
@@ -32,9 +32,9 @@ a:hover {
 
 /* Sidebar Styling */
 .w3-sidebar {
-  width: 120px;
-  background: #222;
-  color: #fff; /* White text color for better contrast */
+  width: 180px;
+  background: #456EAD;
+  color: #456EAD; /* White text color for better contrast */
   position: fixed; /* Fixed sidebar */
   top: 0;
   left: 0;
@@ -140,8 +140,8 @@ a:hover {
 
 
 .bio {
-  font-family: Garamond;
-  font-size: 15pt; /* This is equivalent to about 18.67px */
+  font-family: 'Fira Code Retina';
+  font-size: 13pt; /* This is equivalent to about 18.67px */
   color: #000;
   text-align: left;
   margin-bottom: 1.5rem;
