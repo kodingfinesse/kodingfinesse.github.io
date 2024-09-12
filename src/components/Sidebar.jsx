@@ -1,20 +1,24 @@
+// src/components/Sidebar.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => (
-  <nav className="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-    <a href="#about" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i className="fa fa-user w3-xxlarge"></i>
-      <p>ABOUT</p>
-    </a>
-    <a href="#portfolio" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i className="fa fa-eye w3-xxlarge"></i>
-      <p>PORTFOLIO</p>
-    </a>
-    <a href="#contact" className="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i className="fa fa-envelope w3-xxlarge"></i>
-      <p>CONTACT</p>
-    </a>
-  </nav>
+  <aside className="sidebar">
+    <ul className="sidebar-menu">
+      <li className="sidebar-item">
+        <a href="/" className="button">Home</a>
+      </li>
+      <li className="sidebar-item">
+        <a href="#portfolio" className="button">Portfolio</a>
+      </li>
+      <li className="sidebar-item">
+        <a href="#contact" className="button">Contact</a>
+      </li>
+      <li className="sidebar-item">
+        <Link to="/blog" className="button">Blog</Link>
+      </li>
+    </ul>
+  </aside>
 );
 
 export default Sidebar;
