@@ -9,10 +9,10 @@ const Sidebar = () => (
         <a href="/" className="button">Home</a>
       </li>
       <li className="sidebar-item">
-        <a href="#portfolio" className="button">Portfolio</a>
+        <a href="/#portfolio" className="button">Portfolio</a>
       </li>
       <li className="sidebar-item">
-        <a href="#contact" className="button">Contact</a>
+        <a href="/#contact" className="button">Contact</a>
       </li>
       <li className="sidebar-item">
         <Link to="/blog" className="button">Blog</Link>
