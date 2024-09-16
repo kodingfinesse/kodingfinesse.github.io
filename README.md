@@ -30,5 +30,3 @@ A personal portfolio website showcasing my background, skills, and work.
    ```
    npm start
    ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.

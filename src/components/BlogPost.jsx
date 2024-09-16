@@ -1,32 +1,34 @@
-// src/components/BlogPost.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 const BlogPost = () => {
+
   const { id } = useParams();
 
-  // Fetch or find the blog post data based on the ID
-  const blogPost = {
-    1: {
-      title: "How to Build a Reusable Component in HTML",
-      content: "Detailed content for HTML component..."
-    },
-    2: {
-      title: "Top 10 JavaScript Frameworks in 2024",
-      content: "Detailed content on JavaScript frameworks..."
-    },
-    3: {
-      title: "Understanding CSS Flexbox",
-      content: "Detailed content on Flexbox..."
-    }
-  }[id];
+  // State for holding the content of the blog post
+  const [content, setContent] = useState('');
 
-  if (!blogPost) return <p>Blog post not found!</p>;
+  // State for handling any errors
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Dynamically import the markdown file based on the blog post ID
+    import(`../content/${id}.md`)
+      .then((res) => {
+        fetch(res.default)
+          .then((response) => response.text())
+          .then((text) => setContent(text))
+          .catch((err) => setError('Error loading blog post.'));
+      })
+      .catch(() => setError('Blog post not found.')); // Handles import error
+  }, [id]);
+
+  if (error) return <p>{error}</p>;
 
   return (
     <div>
-      <h1>{blogPost.title}</h1>
-      <p>{blogPost.content}</p>
+      <ReactMarkdown>{content}</ReactMarkdown>
     </div>
   );
 };

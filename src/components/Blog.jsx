@@ -1,34 +1,36 @@
-// src/components/Blog.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+// Functional component that renders a list of blog posts
 const Blog = () => {
+  // Array of blog post objects with details for each post
   const blogPosts = [
     {
       id: 1,
-      title: "How to Build a Reusable Component in HTML",
-      author: "Chiamaka Darren",
-      date: "April 15, 2024",
-      summary: "Building reusable components in HTML..."
+      title: "Linux Workstation",
+      author: "Darren Tran",
+      date: "September 13, 2024",
+      summary: "My current Linux setup and why I chose Debian as my distribution."
     },
     {
       id: 2,
-      title: "Top 10 JavaScript Frameworks in 2024",
-      author: "Solomon Daniels",
-      date: "June 12, 2024",
-      summary: "JavaScript frameworks continue to dominate..."
+      title: "Designing Scalable and Resilient Architectures with AWS",
+      author: "Darren Tran",
+      date: "August 3, 2024",
+      summary: "Explore key AWS services and design patterns to build highly available and scalable systems on the cloud."
     },
     {
       id: 3,
-      title: "Understanding CSS Flexbox",
-      author: "Samuel Grant",
-      date: "March 10, 2024",
-      summary: "Flexbox is a powerful tool in CSS..."
+      title: "Enhancing Network Security: Advanced Concepts and Best Practices",
+      author: "Darren Tran",
+      date: "July 1, 2024",
+      summary: "Dive into advanced network security practices, including Zero Trust, encryption, and effective monitoring, to safeguard IT infrastructure."
     },
   ];
 
   return (
     <div className="blog-thumbnails">
+      {/* Map through the blogPosts array and create a thumbnail for each post */}
       {blogPosts.map(post => (
         <div className="blog-thumbnail" key={post.id}>
           <h2>{post.title}</h2>

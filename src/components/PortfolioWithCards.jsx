@@ -1,10 +1,9 @@
-// Import necessary modules
 import React from 'react';
 import portfolioPhoto from '../images/pcserver.webp';
 import webScraperImage from '../images/webscraper.webp';
 import todoAppImage from '../images/todo.webp';
 
-// Card Component representing both team members and projects
+// Card component to display individual project details
 const Card = ({ pictureUrl, title, subtitle, description, link }) => (
   <div className="profile-card">
     <img className="profile-picture" src={pictureUrl} alt={title} />
@@ -19,10 +18,9 @@ const Card = ({ pictureUrl, title, subtitle, description, link }) => (
   </div>
 );
 
-// Main Component that Combines Cards for Team Members and Projects
+// Data to feed Card component
 const PortfolioWithCards = () => {
 
-  // Data for portfolio projects
   const projects = [
     {
       pictureUrl: portfolioPhoto,
@@ -49,8 +47,6 @@ const PortfolioWithCards = () => {
 
   return (
     <div>
-
-      {/* Portfolio Projects Section */}
       <section className="portfolio-section padding-64 content container" id="portfolio">
         <h2 className="text-light-grey">Portfolio</h2>
         <hr style={{ width: '200px' }} className="opacity" />

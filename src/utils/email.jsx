@@ -4,10 +4,10 @@ export async function sendEmail(data) {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(data), // Convert the data object to JSON for the request
   });
 
   if (!response.ok) {
-    throw new Error('Failed to send email');
+    throw new Error('Failed to send email'); // Throw an error if the request fails
   }
 }
