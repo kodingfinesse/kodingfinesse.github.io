@@ -19,12 +19,12 @@ A personal portfolio website showcasing my background, skills, and work.
 
 1. Clone the repository:
    ```
-   git clone https://github.com/kodeklipper/kodeklipper.github.io
+   git clone https://github.com/kodingfinesse/kodingfinesse.github.io
    ```
 
 2. Install dependencies:
    ```
-   cd kodeklipper.github.io && npm install
+   cd kodingfinesse.github.io && npm install
    ```
 3. Run the development server:
    ```
