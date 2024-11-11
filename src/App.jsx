@@ -10,7 +10,7 @@ import './styles/App.css';
 function App() {
   return (
     <Router>
-      <div className="app-container">
+      <div class="app-container">
         <Sidebar />
         <div className="content">
           <Routes>
