@@ -2,6 +2,7 @@ import React from 'react';
 import portfolioPhoto from '../images/pcserver.webp';
 import webScraperImage from '../images/webscraper.webp';
 import todoAppImage from '../images/todo.webp';
+import dataAnalytics from '../images/data-analytics.jpg';
 
 // Card component to display individual project details
 const Card = ({ pictureUrl, title, subtitle, description, link }) => (
@@ -22,6 +23,13 @@ const Card = ({ pictureUrl, title, subtitle, description, link }) => (
 const PortfolioWithCards = () => {
 
   const projects = [
+    {
+      pictureUrl: dataAnalytics,
+      title: "Data Analytics",
+      subtitle: "Project",
+      description: "Performed data analysis using JupyterNotebook.",
+      link: "https://kodingfinesse.github.io/data-analytics/housing_data.pdf",
+    },
     {
       pictureUrl: portfolioPhoto,
       title: "Local Web Server",
